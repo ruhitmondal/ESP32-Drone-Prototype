@@ -3,7 +3,7 @@
 # 🚁 Project Falcon
 ### ESP32-Based Quadcopter Prototype
 
-An experimental quadcopter prototype designed using **ESP32**, **custom PCB**, **BLDC motors**, and **embedded flight control algorithms**. This project focuses on learning embedded systems, PCB design, sensor integration, and flight stabilization.
+An experimental quadcopter prototype built around an **ESP32** flight controller, **custom PCB**, **BLDC motors**, and a hand-tuned **embedded flight control algorithm**. The project covers the full stack of building a small UAV from scratch — embedded firmware, PCB design, sensor integration, and flight stabilization.
 
 ![Cover](images/cover.png)
 
@@ -12,242 +12,233 @@ An experimental quadcopter prototype designed using **ESP32**, **custom PCB**, *
 ![PCB](https://img.shields.io/badge/Custom-PCB-orange?style=for-the-badge)
 ![Arduino](https://img.shields.io/badge/Arduino-IDE-00979D?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Prototype-yellow?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-lightgrey?style=for-the-badge)
 
 </div>
 
 ---
 
-# 📖 Project Overview
+## 📖 Overview
 
-Project Falcon is an ESP32-based quadcopter prototype developed as an undergraduate embedded systems project.
-
-The objective of this project was to design a low-cost quadcopter capable of performing basic flight operations while integrating a custom PCB, sensors, and wireless control.
+**Project Falcon** is an ESP32-based quadcopter prototype developed as an undergraduate embedded systems project. The goal was to design and build a low-cost quadcopter from the ground up — integrating a custom PCB, IMU and GPS sensors, BLDC motors with electronic speed controllers, wireless RC control, and a servo-driven payload deployment mechanism.
 
 The prototype successfully achieved:
 
 - Motor synchronization
 - Lift-off
-- Embedded flight controller implementation
-- PCB integration
-- Flight testing
+- A working embedded flight controller
+- Full PCB and sensor integration
+- Payload deployment mechanism
+- Multiple rounds of flight testing
 
-Stable hovering and precise flight control remain under development due to PID tuning and sensor calibration challenges.
-
----
-
-# 🚧 Project Status
-
-> **Prototype Successfully Developed**
-
-✔ Hardware Integration Completed
-
-✔ Custom PCB Designed
-
-✔ Flight Controller Developed
-
-✔ Lift-off Achieved
-
-⚠ Stable Flight Control Under Development
+Stable hovering and precise flight control are still in progress, pending further PID tuning, sensor calibration, and vibration isolation.
 
 ---
 
-# ✨ Features
+## 🚧 Project Status
 
-- 🚁 ESP32 Flight Controller
-- 🔷 Custom PCB Design
-- 🧭 MPU6500 IMU
-- 📍 Neo-6M GPS
-- ⚡ 4-in-1 ESC
-- 🔋 Li-Po Battery System
-- 🎮 FlySky FS-i6 Remote Control
-- 🛰 Wireless Flight Control
-- 📦 Payload Deployment Mechanism
-- 🛠 PID Control Algorithm
-- 🧪 Prototype Flight Testing
+| Milestone | Status |
+|---|---|
+| Hardware Integration | ✅ Completed |
+| Custom PCB Design | ✅ Completed |
+| Flight Controller Firmware | ✅ Completed |
+| Sensor Integration | ✅ Completed |
+| Lift-off | ✅ Achieved |
+| Flight Testing | ✅ Completed |
+| Stable Hover / Flight Control | ⚠️ In Progress |
 
 ---
 
-# 🛠 Hardware Components
+## ✨ Features
+
+- ESP32-based flight controller
+- Custom-designed PCB for power and signal integration
+- MPU6500 6-axis IMU for orientation sensing
+- Neo-6M GPS module for position tracking
+- 4-in-1 ESC for motor speed control
+- Li-Po battery power system
+- FlySky FS-i6 transmitter with FS-iA6 receiver for wireless control
+- Servo-based payload deployment mechanism
+- PID-based stabilization algorithm
+- Field-tested prototype flights
+
+---
+
+## 🛠 Hardware Components
 
 | Component | Description |
-|-----------|-------------|
-| ESP32 | Main Flight Controller |
-| MPU6500 | IMU Sensor |
-| Neo-6M GPS | Position Tracking |
+|---|---|
+| ESP32 | Main flight controller |
+| MPU6500 | 6-axis IMU sensor |
+| Neo-6M GPS | Position tracking |
 | 4× A2212 BLDC Motors | Propulsion |
-| 4-in-1 ESC | Motor Speed Control |
-| FlySky FS-iA6 Receiver | Radio Communication |
-| Li-Po Battery | Power Supply |
-| Custom PCB | Flight Controller Board |
-| Servo Motor | Payload Release |
+| 4-in-1 ESC | Motor speed control |
+| FlySky FS-iA6 Receiver | Radio communication |
+| 2200 mAh 3S Li-Po Battery | Power supply |
+| Custom PCB | Flight controller & power integration |
+| Servo Motor | Payload deployment |
 
 ---
 
-# 💻 Software Used
+## 💻 Software & Tools
 
 - Arduino IDE
 - Embedded C++
-- ESP32 Framework
-- PID Control Algorithm
+- ESP32 core / framework
+- PID control algorithm
 
 ---
 
-# 📷 Prototype
+## 📷 Prototype
 
 <p align="center">
 <img src="images/prototype.png" width="700">
 </p>
 
 ---
-# ⚡ Circuit Diagram
+
+## ⚡ Circuit Diagram
 
 <p align="center">
-<img src="pinout.png" width="700">
-</p>
-
-
----
-
-# 🧩 Custom PCB Board
-
-<p align="center">
-<img src="pcb_board.png" width="700">
+<img src="images/pinout.png" width="700">
 </p>
 
 ---
 
+## 🧩 Custom PCB
+
+<p align="center">
+<img src="images/pcb_board.jpg" width="700">
+</p>
 
 ---
+
 ## 📸 Flight Demonstration
 
 <div align="center">
 
 <img src="images/flight-test.gif" width="75%"/>
 
-> 🚁 **Live Action:** Quadcopter lift-off, motor synchronization, and stabilized hover during field tests.
+> 🚁 Prototype flight test — lift-off and flight-control evaluation.
 
 </div>
+
 ---
 
-# 🔌 Hardware Architecture
+## 🔌 System Architecture
 
 ```text
             FlySky Transmitter
                     │
                     ▼
-          FlySky Receiver
+             FlySky Receiver
                     │
                     ▼
           ESP32 Flight Controller
                     │
-    ┌──────────┬──────────┬──────────┐
-    ▼          ▼          ▼          ▼
- MPU6500      GPS       Servo      ESC
-                                   │
-                          ┌────────┴────────┐
-                          ▼                 ▼
-                     BLDC Motors       Propellers
+     ┌─────────┬─────────┬─────────┐
+     ▼         ▼         ▼         ▼
+  MPU6500     GPS      Servo    4-in-1 ESC
+                                     │
+                            ┌────────┴────────┐
+                            ▼                 ▼
+                       BLDC Motors       Propellers
 ```
 
 ---
 
-# ⚙ Working Principle
+## ⚙️ Working Principle
 
-1. ESP32 receives commands from the FlySky receiver.
-2. MPU6500 continuously measures orientation.
-3. PID controller calculates the required correction.
-4. ESC adjusts motor speed.
-5. BLDC motors generate thrust for flight.
-6. GPS provides positioning information.
-7. Servo controls payload deployment.
-
----
-
-# 📈 Experimental Results
-
-### Successfully Achieved
-
-- ✔ Custom PCB Integration
-- ✔ Sensor Communication
-- ✔ Motor Synchronization
-- ✔ Lift-off
-- ✔ Payload Mechanism
-- ✔ Flight Testing
-
-### Current Limitations
-
-- Stable hovering not achieved
-- PID tuning requires further optimization
-- IMU calibration needs improvement
-- Flight stability affected by vibration
+1. The ESP32 receives control commands from the FlySky receiver.
+2. The MPU6500 IMU supplies real-time inertial measurement data.
+3. A PID controller computes the required stabilization corrections.
+4. The ESP32 sends corrected control signals to the ESC.
+5. The ESC regulates the speed of each BLDC motor.
+6. The BLDC motors generate thrust for flight.
+7. The GPS module provides positional data.
+8. The servo motor triggers the payload deployment mechanism on command.
 
 ---
 
-# 📚 Lessons Learned
+## 📈 Experimental Results
 
-This project provided practical experience in:
+**Achieved**
+- Custom PCB integration
+- Reliable sensor communication
+- Motor synchronization
+- Successful lift-off
+- Working payload deployment mechanism
+- Multiple flight test sessions
 
-- Embedded Systems
-- PCB Design
-- Flight Control
-- Sensor Integration
-- PID Tuning
-- Power Electronics
-- Drone System Development
-- Hardware Debugging
+**Current Limitations**
+- Stable hovering not yet fully achieved
+- PID gains require further tuning
+- IMU calibration needs refinement
+- Mechanical vibration affects flight stability
+- Precise flight-path control needs further development
 
 ---
 
-# 📂 Repository Structure
+## 📚 Lessons Learned
+
+This project provided hands-on experience in:
+
+- Embedded systems development
+- PCB design and fabrication
+- Flight control theory
+- Sensor integration and calibration
+- PID tuning
+- Power electronics
+- End-to-end drone system development
+- Hardware debugging and testing
+
+---
+
+## 📂 Repository Structure
 
 ```text
-Project-Falcon
+Project-Falcon/
 │
 ├── README.md
 ├── LICENSE
 │
-├── images
+├── images/
 │   ├── cover.png
-│   ├── prototype.jpg
-│   ├── flight-test.gif
-│   ├── block-diagram.png
-│   └── circuit.png
+│   ├── prototype.png
+│   └── flight-test.gif
 │
-├── src
-│   └── Flight_Controller.ino
+├── pinout.png
+├── pcb_board.jpg
 │
-└── hardware
-    └── PCB.pdf
+└── src/
+    └── Flight_Controller.ino
 ```
 
 ---
 
-# 🚀 Future Improvements
+## 🚀 Future Improvements
 
-- Autonomous Navigation
-- Optical Flow Sensor
-- Improved PID Controller
-- Better IMU Calibration
-- Altitude Hold
-- FPV Camera
-- Obstacle Avoidance
-- Mobile Monitoring App
-- AI-based Flight Assistance
+- [ ] Autonomous navigation
+- [ ] Optical flow sensor for position hold
+- [ ] Improved PID controller tuning
+- [ ] Better IMU calibration routines
+- [ ] Altitude hold mode
+- [ ] FPV camera integration
+- [ ] Obstacle avoidance
+- [ ] Mobile monitoring app
+- [ ] AI-assisted flight stabilization
 
 ---
 
-# 👨‍💻 Author
+## 👨‍💻 Author
 
 **Ruhit Mondal**
-
 B.Sc. in Electrical & Electronic Engineering (EEE)
-
 Ahsanullah University of Science and Technology (AUST)
-
 📍 Bangladesh
 
 ---
 
-# ⭐ Support
+## ⭐ Support
 
-If you found this project interesting, consider giving it a **Star ⭐**.
+If you found this project interesting, consider giving this repository a **Star ⭐** — it helps others discover it too.
