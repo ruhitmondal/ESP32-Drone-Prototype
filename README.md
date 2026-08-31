@@ -95,7 +95,7 @@ Stable hovering and precise flight control remain under development due to PID t
 # 📷 Prototype
 
 <p align="center">
-<img src="images/prototype.jpg" width="700">
+<img src="images/prototype.png" width="700">
 </p>
 
 ---
