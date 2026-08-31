@@ -99,31 +99,34 @@ Stable hovering and precise flight control remain under development due to PID t
 </p>
 
 ---
-
-# 🎥 Flight Test
-
-> Prototype Flight Test (Stable flight is under development)
-
-<p align="center">
-<img src="images/flight-test.gif" width="700">
-</p>
-
----
-
-# 🧩 System Block Diagram
-
-<p align="center">
-<img src="images/block-diagram.png" width="700">
-</p>
-
----
-
 # ⚡ Circuit Diagram
 
 <p align="center">
-<img src="images/circuit.png" width="700">
+<img src="pinout.png" width="700">
 </p>
 
+
+---
+
+# 🧩 Custom PCB Board
+
+<p align="center">
+<img src="pcb_board.png" width="700">
+</p>
+
+---
+
+
+---
+## 📸 Flight Demonstration
+
+<div align="center">
+
+<img src="images/flight-test.gif" width="75%"/>
+
+> 🚁 **Live Action:** Quadcopter lift-off, motor synchronization, and stabilized hover during field tests.
+
+</div>
 ---
 
 # 🔌 Hardware Architecture
