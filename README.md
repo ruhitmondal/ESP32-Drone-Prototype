@@ -297,15 +297,13 @@ Project-Falcon/
 │
 ├── images/
 │   ├── cover.png
-│   ├── prototype.png
-│   └── flight-test.gif
-│
-├── pinout.png
-├── pcb_board.jpg
+│   ├── flight-test.gif
+│   ├── pcb_board.jpg
+│   ├── pinout.png
+│   └── prototype.png
 │
 └── src/
     └── Flight_Controller.ino
-```
 
 ---
 
