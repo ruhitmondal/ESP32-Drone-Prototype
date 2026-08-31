@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚁 Project Falcon
+# Project Falcon
 ### ESP32-Based Quadcopter Prototype
 
 An experimental quadcopter prototype built around an **ESP32** flight controller, **custom PCB**, **BLDC motors**, and a hand-tuned **embedded flight control algorithm**. The project covers the full stack of building a small UAV from scratch — embedded firmware, PCB design, sensor integration, and flight stabilization.
@@ -178,6 +178,22 @@ Stable hovering and precise flight control are still in progress, pending furthe
 - Precise flight-path control needs further development
 
 ---
+## Engineering Contribution
+
+The main contribution of Project Falcon was the development of a low-cost, custom ESP32-based flight-control platform rather than relying on a commercial flight controller.
+
+The project involved:
+
+- Designing and fabricating a custom flight-controller PCB
+- Developing embedded firmware for sensor acquisition and motor control
+- Integrating MPU6500 inertial sensing with a real-time control loop
+- Implementing PID-based roll, pitch, and yaw stabilization
+- Interfacing an RC receiver with the ESP32
+- Generating control signals for a 4-in-1 ESC
+- Integrating GPS and a servo-actuated payload mechanism
+- Validating the complete system through physical flight testing
+
+The project emphasizes hands-on embedded systems engineering, control systems, PCB design, and iterative experimental validation.
 
 ## 📚 Lessons Learned
 
