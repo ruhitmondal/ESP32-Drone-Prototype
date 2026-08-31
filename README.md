@@ -238,7 +238,3 @@ Ahsanullah University of Science and Technology (AUST)
 📍 Bangladesh
 
 ---
-
-## ⭐ Support
-
-If you found this project interesting, consider giving this repository a **Star ⭐** — it helps others discover it too.
