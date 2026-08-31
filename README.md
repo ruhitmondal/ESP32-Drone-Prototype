@@ -284,11 +284,8 @@ This project provided direct, practical experience in:
 - Power electronics for motor-driven systems
 - End-to-end UAV system development
 - Hardware debugging and iterative testing
-
----
-
 ## Repository Structure
-
+ 
 ```text
 Project-Falcon/
 │
@@ -298,45 +295,46 @@ Project-Falcon/
 ├── images/
 │   ├── cover.png
 │   ├── flight-test.gif
-│   ├── pcb_board.jpg
-│   ├── pinout.png
-│   └── prototype.png
+│   └── pcb_board.jpg 
+│
+├── pinout.png
+├── prototype.png
 │
 └── src/
     └── Flight_Controller.ino
-
+```
+ 
 ---
-
+ 
 ## Future Development
-
+ 
 **Flight Control**
 - [ ] Improved PID controller tuning
 - [ ] Better IMU calibration routines
 - [ ] Altitude hold mode
-
 **Navigation**
 - [ ] Autonomous navigation
 - [ ] Optical flow sensor for position hold
 - [ ] Obstacle avoidance
-
 **Hardware & Payload**
 - [ ] FPV camera integration
-
 **Intelligent Systems**
 - [ ] Mobile monitoring application
 - [ ] AI-assisted flight stabilization
-
 ---
-
+ 
 ## Author
-
+ 
 **Ruhit Mondal**
 B.Sc. in Electrical & Electronic Engineering (EEE)
 Ahsanullah University of Science and Technology (AUST)
 Bangladesh
-
+ 
+---
+ 
+## Support
+ 
+If this project is useful or interesting to you, consider starring the repository — it helps others find it.
+ 
 ---
 
-## Support
-
-If this project is useful or interesting to you, consider starring the repository — it helps others find it.
